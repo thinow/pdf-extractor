@@ -19,7 +19,7 @@ install:
 	$(call check_defined, VIRTUAL_ENV, please use a virtual environment)
 	pip install -r requirements.txt
 
-run: install
+extract.german.nouns: install
 	$(call check_defined, PDF_PATH, path of the pdf file)
-	$(call check_defined, PAGE_NUMBER)
-	python -m application.runner $(PDF_PATH) $(PAGE_NUMBER)
+	$(call check_defined, PAGE_NUMBER, page number)
+	python -m application.extract_german_nouns.run $(PDF_PATH) $(PAGE_NUMBER)

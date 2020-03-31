@@ -3,7 +3,7 @@ from io import StringIO
 
 from application.extract_german_nouns.extractor import GermanNounsExtractor
 
-SAMPLE_DICTIONARY = 'tests/extract_german_nouns/duden_dictionary_sample.pdf'
+SAMPLE_DICTIONARY = 'tests/extract_german_nouns/resources/duden_dictionary_sample.pdf'
 ANY_PAGE = 152
 
 

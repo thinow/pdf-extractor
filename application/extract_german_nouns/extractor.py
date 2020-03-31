@@ -2,11 +2,11 @@ import re
 
 from pdfminer.high_level import extract_text
 
-# TODO include accents [A-Za-zÀ-ÖØ-öø-ÿ]
 # TODO exclude unexpected words : e.g. die Renten
+# TODO remove space at the end of the line
 # TODO explain the regular expression
 
-PATTERN = r'([A-Z\\|]+), d(ie|er|as)'
+PATTERN = r'([A-Za-zßäüö\\|]+), d(ie|er|as)'
 FLAGS = re.MULTILINE | re.IGNORECASE
 
 

@@ -17,6 +17,7 @@ die Aufbereitungsanlage
 die Renten 
 die Aufbesserung 
 die Aufbietung 
+die Aufblähung 
 die Uhr 
 die Aufblende 
 die Aufbewahrung 

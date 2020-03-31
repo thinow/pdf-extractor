@@ -6,23 +6,23 @@ from snapshottest import Snapshot
 
 snapshots = Snapshot()
 
-snapshots['test_extract_sample_of_dictionary german_nouns_from_sample'] = '''das Aufbauspiel 
-der Aufbauspieler 
-die Aufbauspielerin 
-das Aufbaustudium 
-die Aufbaustufe 
-das Aufbautraining 
-die Aufbereitung 
-die Aufbereitungsanlage 
-die Renten 
-die Aufbesserung 
-die Aufbietung 
-die Aufblähung 
-die Uhr 
-die Aufblende 
-die Aufbewahrung 
-der Aufbewahrungsort 
-der Aufbewahrungsraum 
-der Aufblick 
-die Backenzahn 
+snapshots['test_extract_sample_of_dictionary german_nouns_from_sample'] = '''Aufbauspiel\tdas
+Aufbauspieler\tder
+Aufbauspielerin\tdie
+Aufbaustudium\tdas
+Aufbaustufe\tdie
+Aufbautraining\tdas
+Aufbereitung\tdie
+Aufbereitungsanlage\tdie
+Renten\tdie
+Aufbesserung\tdie
+Aufbietung\tdie
+Aufblähung\tdie
+Uhr\tdie
+Aufblende\tdie
+Aufbewahrung\tdie
+Aufbewahrungsort\tder
+Aufbewahrungsraum\tder
+Aufblick\tder
+Backenzahn\tdie
 '''

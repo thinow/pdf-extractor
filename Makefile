@@ -19,6 +19,9 @@ install:
 	$(call check_defined, VIRTUAL_ENV, please use a virtual environment)
 	pip install -r requirements.txt
 
+test: install
+	pytest -vv
+
 extract.german.nouns: install
 	$(call check_defined, PDF_PATH, path of the pdf file)
 	$(call check_defined, PAGE_NUMBER, page number)

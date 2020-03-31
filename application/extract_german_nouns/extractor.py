@@ -12,7 +12,7 @@ FLAGS = re.MULTILINE | re.IGNORECASE
 
 class GermanNounsExtractor:
 
-    def __init__(self, file_path, page_number) -> None:
+    def __init__(self, file_path: str, page_number: int) -> None:
         self.file_path = file_path
         self.page_number = page_number
 

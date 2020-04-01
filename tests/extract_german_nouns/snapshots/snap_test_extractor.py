@@ -6,7 +6,7 @@ from snapshottest import Snapshot
 
 snapshots = Snapshot()
 
-snapshots['test_extract_sample_of_dictionary german_nouns_from_sample'] = '''Aufbauschule\tdie
+snapshots['test_extract_single_page_of_dictionary_sample 1'] = '''Aufbauschule\tdie
 Aufbauspiel\tdas
 Aufbauspieler\tder
 Aufbauspielerin\tdie

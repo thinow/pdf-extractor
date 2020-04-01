@@ -13,15 +13,15 @@ FLAGS = re.IGNORECASE
 
 class GermanNounsExtractor:
 
-    def __init__(self, file_path: str, page_number: int) -> None:
+    def __init__(self, file_path: str, from_page: int, to_page: int) -> None:
         self.file_path = file_path
-        self.page_number = page_number
+        self.page_number = from_page
+        self.regexp = re.compile(PATTERN, FLAGS)
 
     def extract(self) -> None:
-        text = extract_text(self.file_path, page_numbers=[self.page_number])
-        regexp = re.compile(PATTERN, FLAGS)
+        text = extract_text(self.file_path, page_numbers=[self.page_number - 1])
         for line in text.splitlines():
-            match = regexp.match(line)
+            match = self.regexp.match(line)
             if match:
                 word = match.group(2).replace('|', '')
                 article = 'd' + match.group(3)

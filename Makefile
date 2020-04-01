@@ -24,5 +24,6 @@ test: install
 
 extract.german.nouns: install
 	$(call check_defined, PDF_PATH, path of the pdf file)
-	$(call check_defined, PAGE_NUMBER, page number)
-	python -m application.extract_german_nouns.run $(PDF_PATH) $(PAGE_NUMBER)
+	$(call check_defined, FROM_PAGE, number of the first page)
+	$(call check_defined, TO_PAGE, number of the first page)
+	python -m application.extract_german_nouns.run $(PDF_PATH) $(FROM_PAGE) $(TO_PAGE)

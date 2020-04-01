@@ -2,13 +2,13 @@ import re
 
 from pdfminer.high_level import extract_text
 
-# TODO exclude unexpected words : e.g. die Renten
-# TODO explain the regular expression
+# TODO include words really first word : Auf|bau|schu|le
 
 # Regular expression :
-# [A-Za-zßäüö\\|]+) matches all the words (can contain accents and pipes)
-# , d(ie|er|as) matches the words only followed by a comma and an article
-PATTERN = r'([A-Za-zßäüö\\|]+), d(ie|er|as)'
+# [a-zßäüö\\|]+) reflect a word (may contain german accents and pipes)
+# , d(ie|er|as) should be followed by a comma and an article
+# (;|:| \(.+\):| 〈Pl) should be followed by some special patterns (semicolon, or plural between braces)
+PATTERN = r'([a-zßäüö\\|]+), d(ie|er|as)(;|:| \(.+\):| 〈Pl)'
 FLAGS = re.IGNORECASE
 
 
@@ -20,8 +20,9 @@ class GermanNounsExtractor:
 
     def extract(self) -> None:
         text = extract_text(self.file_path, page_numbers=[self.page_number])
+        regexp = re.compile(PATTERN, FLAGS)
         for line in text.splitlines():
-            match = re.match(PATTERN, line, FLAGS)
+            match = regexp.match(line)
             if match:
                 word = match.group(1).replace('|', '')
                 article = 'd' + match.group(2)

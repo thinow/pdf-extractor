@@ -14,15 +14,12 @@ Aufbaustufe\tdie
 Aufbautraining\tdas
 Aufbereitung\tdie
 Aufbereitungsanlage\tdie
-Renten\tdie
 Aufbesserung\tdie
 Aufbietung\tdie
 Aufblähung\tdie
-Uhr\tdie
 Aufblende\tdie
 Aufbewahrung\tdie
 Aufbewahrungsort\tder
 Aufbewahrungsraum\tder
 Aufblick\tder
-Backenzahn\tdie
 '''

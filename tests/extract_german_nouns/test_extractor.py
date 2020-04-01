@@ -7,18 +7,25 @@ SAMPLE_DICTIONARY = 'tests/extract_german_nouns/resources/duden_dictionary_sampl
 ANY_PAGE = 153
 
 
-def test_extract_single_page_of_dictionary_sample(snapshot):
+def test_print_nouns_from_single_page_of_dictionary_sample(snapshot):
     # given
     output = StringIO()
-    extractor = GermanNounsExtractor(
-        SAMPLE_DICTIONARY,
-        from_page=ANY_PAGE,
-        to_page=ANY_PAGE
-    )
+    extractor = GermanNounsExtractor(SAMPLE_DICTIONARY)
 
     # when
     with redirect_stdout(output):
-        extractor.extract()
+        extractor.print_nouns_from_single_page(ANY_PAGE)
 
     # then
     snapshot.assert_match(output.getvalue())
+
+
+def test_extract_text_from_pdf(snapshot):
+    # given
+    extractor = GermanNounsExtractor(SAMPLE_DICTIONARY)
+
+    # when
+    text = extractor.extract_text(50)
+
+    # then
+    snapshot.assert_match(text)

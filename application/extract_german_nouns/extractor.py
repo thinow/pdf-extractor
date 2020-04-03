@@ -16,8 +16,7 @@ class GermanNounsExtractor:
 
     def extract(self) -> None:
         with open(self.file_path, 'r', encoding='utf-8') as file:
-            text = file.read()
-            for line in text.splitlines():
+            for line in file:
                 for item in line.split('. '):
                     self.extract_from_line(item)
 

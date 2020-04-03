@@ -1,18 +1,17 @@
 import re
 
 # Regular expression :
-# [a-zßäüö\\|]+) reflect a word (may contain german accents and pipes)
+# [A-ZßÄÜÖ][a-zßäüö\\|]+ reflects a capitalised word (may contain german accents and pipes)
 # , ? should be followed by a comma and optionally a space
 # d(ie|er|as) should be followed by a comma and an article
-PATTERN = r'([a-zßäüö\\|]+), ?d(ie|er|as)'
-FLAGS = re.IGNORECASE
+PATTERN = r'([A-ZßÄÜÖ][a-zßäüö\\|]+), ?d(ie|er|as)'
 
 
 class GermanNounsExtractor:
 
     def __init__(self, file_path: str) -> None:
         self.file_path = file_path
-        self.regexp = re.compile(PATTERN, FLAGS)
+        self.regexp = re.compile(PATTERN)
 
     def extract(self) -> None:
         with open(self.file_path, 'r', encoding='utf-8') as file:

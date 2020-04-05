@@ -7,6 +7,8 @@ import re
 # d(ie|er|as) should be followed by a comma and an article
 PATTERN = '([{first_character}][a-zßäüö\\|]+) ?(\\[.+\\])?, ?d(ie|er|as)'
 
+# TODO check if "Heuer, der" is matched (prefixed with 1 or 2, see page 2)
+# TODO includes words with "-" in between
 
 class GermanNounsExtractor:
 

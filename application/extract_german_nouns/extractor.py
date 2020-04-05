@@ -7,8 +7,6 @@ import re
 PATTERN = '([{first_character}][a-zßäüö\\|]+), ?d(ie|er|as)'
 
 
-# TODO require first letters as an argument
-
 # TODO include lines with hints in-between
 # Au|ber|gi|ne [...], die;
 

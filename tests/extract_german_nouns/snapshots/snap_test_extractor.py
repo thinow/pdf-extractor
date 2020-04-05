@@ -10,7 +10,6 @@ snapshots = Snapshot()
 snapshots['test_extract_nouns_from_sample[sample-0.txt] 1'] = '''Ablenkung\tdie
 Ablenkungsmanöver\tdas
 Ableser\tder
-Handlung\tdie
 Ableserin\tdie
 Ablesung\tdie
 Ablieferung\tdie
@@ -52,4 +51,28 @@ Aufbesserung\tdie
 Aufbewahrung\tdie
 Aufbewahrungsort\tder
 Aufbewahrungsraum\tder
+'''
+
+snapshots['test_extract_nouns_from_sample[sample-2.txt] 1'] = '''Ätzkalk\tder
+Ätzkunst\tdie
+Ätzstift\tder
+Au\tdie
+Audienz\tdie
+Ätzung\tdie
+Attraktivität\tdie
+Attrappe\tdie
+Attribuierung\tdie
+Attribut\tdas
+Attributsatz\tder
+Ätze\tdie
+Audimax\tdas
+Audiodatei\tdie
+Audiokommentar\tder
+Audiometer\tdas
+Audiometrie\tdie
+Audiovision\tdie
+Audition\tdie
+Auditor\tder
+Auditorin\tdie
+Auditorium\tdas
 '''

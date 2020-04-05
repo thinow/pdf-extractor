@@ -22,6 +22,7 @@ install:
 test: install
 	pytest -vv
 
-extract.german.nouns: install
+extract.german.nouns.from.file: install
+	$(call check_defined, FIRST_CHARACTER, first character of the extracted nouns)
 	$(call check_defined, SOURCE_FILE, path of the text file)
-	python -m application.extract_german_nouns.run $(SOURCE_FILE)
+	python -m application.extract_german_nouns.run $(FIRST_CHARACTER) $(SOURCE_FILE)

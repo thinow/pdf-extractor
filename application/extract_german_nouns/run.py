@@ -2,7 +2,7 @@ import sys
 
 from .extractor import GermanNounsExtractor
 
-FILE = sys.argv[1]
-FIRST_CHAR = ['a', 'ä']  # TODO not hard-code the first char in the runner
+FIRST_CHARACTER = sys.argv[1]
+FILE = sys.argv[2]
 
-GermanNounsExtractor(FILE, FIRST_CHAR).extract()
+GermanNounsExtractor(FILE, [FIRST_CHARACTER]).extract()

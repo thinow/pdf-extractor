@@ -2,13 +2,11 @@ import re
 
 # Regular expression :
 # [{first_character}][a-zßäüö\\|]+ reflects a capitalised word (may contain german accents and pipes)
+#  ?(\\[.+\\])? accepts hints between brackets
 # , ? should be followed by a comma and optionally a space
 # d(ie|er|as) should be followed by a comma and an article
-PATTERN = '([{first_character}][a-zßäüö\\|]+), ?d(ie|er|as)'
+PATTERN = '([{first_character}][a-zßäüö\\|]+) ?(\\[.+\\])?, ?d(ie|er|as)'
 
-
-# TODO include lines with hints in-between
-# Au|ber|gi|ne [...], die;
 
 class GermanNounsExtractor:
 
@@ -33,5 +31,5 @@ class GermanNounsExtractor:
         match = self.regexp.match(line)
         if match:
             word = match.group(1).replace('|', '')
-            article = 'd' + match.group(2)
+            article = 'd' + match.group(3)
             print(f'{word}\t{article}')

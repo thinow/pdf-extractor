@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 
 from snapshottest import Snapshot
 
-
 snapshots = Snapshot()
 
 snapshots['test_extract_nouns_from_sample[sample-0.txt] 1'] = '''Ablenkung\tdie
@@ -57,6 +56,7 @@ snapshots['test_extract_nouns_from_sample[sample-2.txt] 1'] = '''Ätzkalk\tder
 Ätzkunst\tdie
 Ätzstift\tder
 Au\tdie
+Aubergine\tdie
 Audienz\tdie
 Ätzung\tdie
 Attraktivität\tdie
@@ -66,11 +66,17 @@ Attribut\tdas
 Attributsatz\tder
 Ätze\tdie
 Audimax\tdas
+Audiobook\tdas
 Audiodatei\tdie
+Audiofile\tdas
+Audioguide\tder
 Audiokommentar\tder
 Audiometer\tdas
 Audiometrie\tdie
+Audiostream\tder
 Audiovision\tdie
+Audit\tdas
+Audition\tdie
 Audition\tdie
 Auditor\tder
 Auditorin\tdie

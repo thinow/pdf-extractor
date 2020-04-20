@@ -6,7 +6,7 @@ from snapshottest import Snapshot
 
 snapshots = Snapshot()
 
-snapshots['test_extract_nouns_from_sample[sample-0.txt] 1'] = '''Ablenkung\tdie
+snapshots['test_extract_nouns_from_sample[sample0] 1'] = '''Ablenkung\tdie
 Ablenkungsmanöver\tdas
 Ableser\tder
 Ableserin\tdie
@@ -33,7 +33,7 @@ Abmilderung\tdie
 Abmoderation\tdie
 '''
 
-snapshots['test_extract_nouns_from_sample[sample-1.txt] 1'] = '''Aufbietung\tdie
+snapshots['test_extract_nouns_from_sample[sample1] 1'] = '''Aufbietung\tdie
 Aufblähung\tdie
 Aufblende\tdie
 Aufblick\tder
@@ -52,7 +52,7 @@ Aufbewahrungsort\tder
 Aufbewahrungsraum\tder
 '''
 
-snapshots['test_extract_nouns_from_sample[sample-2.txt] 1'] = '''Ätzkalk\tder
+snapshots['test_extract_nouns_from_sample[sample2] 1'] = '''Ätzkalk\tder
 Ätzkunst\tdie
 Ätzstift\tder
 Au\tdie
@@ -64,6 +64,8 @@ Attrappe\tdie
 Attribuierung\tdie
 Attribut\tdas
 Attributsatz\tder
+Atze\tdie
+Atze\tdie
 Ätze\tdie
 Audimax\tdas
 Audiobook\tdas

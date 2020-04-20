@@ -1,14 +1,15 @@
 import re
 
 # Regular expression :
+# [1-9]? an optional digit as a prefix
 # [{first_character}][a-zßäüö\\|]+ reflects a capitalised word (may contain german accents and pipes)
 #  ?(\\[.+\\])? accepts hints between brackets
 # , ? should be followed by a comma and optionally a space
 # d(ie|er|as) should be followed by a comma and an article
-PATTERN = '([{first_character}][a-zßäüö\\|]+) ?(\\[.+\\])?, ?d(ie|er|as)'
+PATTERN = '[1-9]?([{first_character}][a-zßäüö\\|]+) ?(\\[.+\\])?, ?d(ie|er|as)'
 
-# TODO check if "Heuer, der" is matched (prefixed with 1 or 2, see page 2)
-# TODO includes words with "-" in between
+
+# TODO includes words prefixed with "M "...
 
 class GermanNounsExtractor:
 
